@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('../img/todo-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 500px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+#newtask {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#newtask input {
+    flex: 1;
+    height: 45px;
+    padding: 12px;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    border-radius: 5px;
+    outline: none;
+    background: white;
+}
+
+#newtask input:focus {
+    border-color: #667eea;
+}
+
+#newtask button {
+    width: 60px;
+    height: 45px;
+    background: #667eea;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+#newtask button:hover {
+    background: #5568d3;
+}
+
+#tasks {
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f0f4ff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.task span {
+    font-size: 15px;
+    color: #333;
+    word-break: break-word;
+}
+
+.task button {
+    width: 40px;
+    height: 40px;
+    background: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.task button:hover {
+    background: #c0392b;
+}

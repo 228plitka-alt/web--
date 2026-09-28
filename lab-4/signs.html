@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дорожные знаки</title>
+    
+    <!-- Подключение jQuery UI (для tooltip) -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    
+    <!-- Стили для подсказок -->
+    <style>
+        .tooltip {
+            position: relative;
+        }
+        .tooltip .ui-tooltip {
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Дорожные знаки</h1>
+    
+    <p>
+        <img src="img/signs/1.webp" alt="Железнодорожный переезд со шлагбаумом" class="tooltip" data-hint="Железнодорожный переезд со шлагбаумом" width="100">
+        <img src="img/signs/2.webp" alt="Железнодорожный переезд без шлагбаума" class="tooltip" data-hint="Железнодорожный переезд без шлагбаума" width="100">
+        <img src="img/signs/3.webp" alt="Однопутная железная дорога" class="tooltip" data-hint="Однопутная железная дорога" width="100">
+        <img src="img/signs/4.webp" alt="Пересечение с трамвайной линией" class="tooltip" data-hint="Пересечение с трамвайной линией" width="100">
+        <img src="img/signs/5.webp" alt="Светофорное регулирование" class="tooltip" data-hint="Светофорное регулирование" width="100">
+    </p>
+    
+    <p>
+        <img src="img/signs/6.webp" alt="Выезд на набережную" class="tooltip" data-hint="Выезд на набережную" width="100">
+        <img src="img/signs/7.webp" alt="Крутой спуск" class="tooltip" data-hint="Крутой спуск" width="100">
+        <img src="img/signs/8.webp" alt="Главная дорога" class="tooltip" data-hint="Главная дорога" width="100">
+        <img src="img/signs/9.webp" alt="Движение без остановки запрещено" class="tooltip" data-hint="Движение без остановки запрещено" width="100">
+        <img src="img/signs/10.webp" alt="Преимущество перед встречным движением" class="tooltip" data-hint="Преимущество перед встречным движением" width="100">
+    </p>
+    
+    <p>
+        <img src="img/signs/11.webp" alt="Объезд препятствия слева" class="tooltip" data-hint="Объезд препятствия слева" width="100">
+        <img src="img/signs/12.webp" alt="Пешеходная и велосипедная дорожка с совмещённым движением" class="tooltip" data-hint="Пешеходная и велосипедная дорожка с совмещённым движением" width="100">
+        <img src="img/signs/13.webp" alt="Конец полосы" class="tooltip" data-hint="Конец полосы" width="100">
+        <img src="img/signs/14.webp" alt="Место стоянки" class="tooltip" data-hint="Место стоянки" width="100">
+        <img src="img/signs/15.webp" alt="Аварийный выход" class="tooltip" data-hint="Аварийный выход" width="100">
+    </p>
+    
+    <!-- Скрипт для tooltip -->
+    <script>
+        $(function () {
+            $(document).tooltip({
+                items: "img",
+                content: function () {
+                    var $element = $(this);
+                    if ($element.is("img")) {
+                        return $element.data('hint');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
